@@ -1,0 +1,13 @@
+<app-create-task></app-create-task>
+
+<ul class="tasks-list">
+  <li *ngFor="let task of tasksList">
+    <div [ngClass]="{'completed': task.completed}">{{task.description}}</div>
+    <div>
+      <mat-checkbox [(ngModel)]="task.completed">Completed</mat-checkbox>
+    </div>
+    <div>
+      <button mat-icon-button color="warn" (click)="remove(task.id)"><mat-icon>delete</mat-icon></button>
+    </div>
+  </li>
+</ul>

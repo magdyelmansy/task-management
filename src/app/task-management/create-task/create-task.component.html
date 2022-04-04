@@ -1,0 +1,6 @@
+<form (ngSubmit)="create()">
+  <mat-form-field>
+    <input matInput placeholder="Task description" [(ngModel)]="task.description" name="description">
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Create</button>
+</form>
